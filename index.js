@@ -44,20 +44,31 @@ document.getElementById('agregarInversionista').addEventListener('click', functi
 function obtenerTipoCuenta(porcentaje) {
     switch (porcentaje) {
         case 0.021: return "V1";
-        case 0.025: return "V2";
-        case 0.029: return "V3";
-        case 0.033: return "V4";
-        case 0.037: return "V5";
-        case 0.041: return "V6";
+        case 0.023: return "V2";
+        case 0.027: return "V3";
+        case 0.031: return "V4";
+        case 0.036: return "V5";
+        case 0.040: return "V6";
         default: return "Desconocido";
     }
 }
 
+const limitesCuentas = {
+    "V1": 1000,
+    "V2": 2000,
+    "V3": 6000,
+    "V4": 10000,
+    "V5": 40000,
+    "V6": 100000
+};
+
 function calcularGanancia(monto, porcentaje, tipo, dias = 1) {
     let ganancia = 0;
+    let limite = limitesCuentas[tipo] || monto;
+
     for (let i = 0; i < dias; i++) {
-        if (tipo === "V1" && monto >= 1000) {
-            ganancia += 1000 * porcentaje;
+        if (tipo !== "Desconocido" && monto >= limite) {
+            ganancia += limite * porcentaje;
         } else {
             let gananciaDiaria = monto * porcentaje;
             ganancia += gananciaDiaria;
