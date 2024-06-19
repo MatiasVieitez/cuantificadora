@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 80%;
+    max-width: 800px;
+    text-align: center;
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+}
+
+form {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    text-align: left;
+    width: 100%;
+    max-width: 400px;
+}
+
+input, select {
+    width: 80%;
+    max-width: 400px;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#resultados {
+    margin-top: 20px;
+    text-align: left;
+}
+
+#resultados p, #resultados div {
+    margin: 5px 0;
+}
+
+#inversionistasContainer > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 500px;
+}
+
+#inversionistasContainer input {
+    width: 45%;
+}
+
+.confirmar-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    height: 42px; /* Ajusta la altura para que coincida con los campos de entrada */
+}
+
+.confirmar-btn:hover {
+    background-color: #218838;
+}
+
+.confirmar-btn:focus {
+    outline: none;
+}
+
+input::placeholder {
+    color: #999;
+}
